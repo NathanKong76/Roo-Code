@@ -19,9 +19,7 @@
 	"views.contextMenu.label": "Roo Code",
 	"views.terminalMenu.label": "Roo Code",
 	"views.sidebar.name": "Roo Code",
-	"command.mcpServers.title": "Servidors MCP",
-	"command.prompts.title": "Modes",
-	"command.history.title": "Historial",
+	"command.history.title": "Historial de Tasques",
 	"command.marketplace.title": "Mercat",
 	"command.openInEditor.title": "Obrir a l'Editor",
 	"command.cloud.title": "Cloud",
@@ -32,6 +30,9 @@
 	"commands.deniedCommands.description": "Prefixos d'ordres que seran automàticament denegats sense demanar aprovació. En cas de conflictes amb ordres permeses, la coincidència de prefix més llarga té prioritat. Afegeix * per denegar totes les ordres.",
 	"commands.commandExecutionTimeout.description": "Temps màxim en segons per esperar que l'execució de l'ordre es completi abans d'esgotar el temps (0 = sense temps límit, 1-600s, per defecte: 0s)",
 	"commands.commandTimeoutAllowlist.description": "Prefixos d'ordres que estan exclosos del temps límit d'execució d'ordres. Les ordres que coincideixin amb aquests prefixos s'executaran sense restriccions de temps límit.",
+	"commands.serviceReadyTimeout.description": "Temps màxim en segons per esperar que una ordre de servei (com npm run dev) estigui llesta (10-600s, predeterminat: 60s). Les ordres de servei s'executen en segon pla després d'aquest temps.",
+	"commands.serviceCommandPatterns.description": "Patrons d'ordres addicionals a tractar com a ordres de servei (processos en segon pla). Afegiu patrons regex com 'node server.js' o 'python app.py'.",
+	"commands.enableUniversalCommandTimeout.description": "Aplicar el temps límit d'execució d'ordres a TOTES les ordres, no només als patrons coneguts. Quan està habilitat, qualsevol ordre que s'executi més temps que el temps límit es tractarà com un servei en segon pla.",
 	"commands.preventCompletionWithOpenTodos.description": "Evitar la finalització de tasques quan hi ha tasques pendents incompletes a la llista de tasques",
 	"settings.vsCodeLmModelSelector.description": "Configuració per a l'API del model de llenguatge VSCode",
 	"settings.vsCodeLmModelSelector.vendor.description": "El proveïdor del model de llenguatge (p. ex. copilot)",
@@ -44,5 +45,5 @@
 	"settings.apiRequestTimeout.description": "Temps màxim en segons per esperar les respostes de l'API (0 = sense temps d'espera, 1-3600s, per defecte: 600s). Es recomanen valors més alts per a proveïdors locals com LM Studio i Ollama que poden necessitar més temps de processament.",
 	"settings.newTaskRequireTodos.description": "Requerir el paràmetre de tasques pendents quan es creïn noves tasques amb l'eina new_task",
 	"settings.codeIndex.embeddingBatchSize.description": "La mida del lot per a operacions d'incrustació durant la indexació de codi. Ajusta això segons els límits del teu proveïdor d'API. Per defecte és 60.",
-	"settings.toolProtocol.description": "Protocol d'eines a utilitzar per a les interaccions d'IA. XML és el protocol per defecte i recomanat. Natiu és experimental i pot ser que no funcioni amb tots els proveïdors."
+	"settings.debug.description": "Activa el mode de depuració per mostrar botons addicionals per veure l'historial de conversa de l'API i els missatges de la interfície d'usuari com a JSON embellert en fitxers temporals."
 }

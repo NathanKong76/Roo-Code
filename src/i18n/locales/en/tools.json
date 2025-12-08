@@ -1,4 +1,23 @@
 {
+	"get_service_logs": {
+		"no_services": "No background services are currently running.",
+		"available_services": "Available background services:",
+		"usage_hint": "Use get_service_logs with a specific service_id to get logs from that service.",
+		"service_not_found": "Service '{{serviceId}}' not found. Use get_service_logs without parameters to list all running services.",
+		"service_info": "Service: {{serviceId}}\nCommand: {{command}}\nStatus: {{status}}",
+		"no_logs": "No logs available yet."
+	},
+	"stop_service": {
+		"no_services": "No background services are currently running.",
+		"service_id_required": "A service_id is required to stop a service.",
+		"available_services": "Available background services:",
+		"usage_hint": "Use stop_service with a specific service_id to stop that service.",
+		"service_not_found": "Service '{{serviceId}}' not found.",
+		"success": "Service '{{serviceId}}' has been stopped successfully.",
+		"partial_success": "Service '{{serviceId}}' may not have fully terminated.",
+		"stopping": "Service '{{serviceId}}' is being stopped.",
+		"error": "Failed to stop service '{{serviceId}}': {{error}}"
+	},
 	"readFile": {
 		"linesRange": " (lines {{start}}-{{end}})",
 		"definitionsOnly": " (definitions only)",
@@ -7,12 +26,25 @@
 		"imageWithSize": "Image file ({{size}} KB)"
 	},
 	"toolRepetitionLimitReached": "Roo appears to be stuck in a loop, attempting the same action ({{toolName}}) repeatedly. This might indicate a problem with its current strategy. Consider rephrasing the task, providing more specific instructions, or guiding it towards a different approach.",
+	"unknownToolError": "Roo tried to use an unknown tool: \"{{toolName}}\". Retrying...",
 	"codebaseSearch": {
 		"approval": "Searching for '{{query}}' in codebase..."
 	},
 	"newTask": {
 		"errors": {
 			"policy_restriction": "Failed to create new task due to policy restrictions."
+		}
+	},
+	"generateImage": {
+		"openRouterApiKeyRequired": "OpenRouter API key is required for image generation with OpenRouter models. Please configure it in the Image Generation experimental settings.",
+		"failedWithStatus": "Failed to generate image: {{status}} {{statusText}}",
+		"failedWithMessage": "Failed to generate image: {{message}}",
+		"noImageGenerated": "No image was generated in the response",
+		"invalidImageData": "Invalid image data in response",
+		"invalidImageFormat": "Invalid image format received",
+		"unknownError": "Unknown error occurred",
+		"roo": {
+			"authRequired": "Roo Code Cloud authentication is required for image generation. Please sign in to Roo Code Cloud."
 		}
 	}
 }

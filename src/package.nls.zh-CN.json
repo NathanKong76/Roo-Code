@@ -19,9 +19,7 @@
 	"views.contextMenu.label": "Roo Code",
 	"views.terminalMenu.label": "Roo Code",
 	"views.sidebar.name": "Roo Code",
-	"command.mcpServers.title": "MCP 服务器",
-	"command.prompts.title": "模式",
-	"command.history.title": "历史记录",
+	"command.history.title": "任务历史记录",
 	"command.marketplace.title": "应用市场",
 	"command.openInEditor.title": "在编辑器中打开",
 	"command.cloud.title": "Cloud",
@@ -32,6 +30,9 @@
 	"commands.deniedCommands.description": "将自动拒绝而无需请求批准的命令前缀。与允许命令冲突时，最长前缀匹配优先。添加 * 拒绝所有命令。",
 	"commands.commandExecutionTimeout.description": "等待命令执行完成的最大时间（秒），超时前（0 = 无超时，1-600秒，默认：0秒）",
 	"commands.commandTimeoutAllowlist.description": "从命令执行超时中排除的命令前缀。匹配这些前缀的命令将在没有超时限制的情况下运行。",
+	"commands.serviceReadyTimeout.description": "等待服务命令（如 npm run dev）就绪的最大时间（秒）（10-600秒，默认：60秒）。超时后服务命令将在后台运行。",
+	"commands.serviceCommandPatterns.description": "要作为服务命令（后台进程）处理的额外命令模式。添加正则表达式模式，如 'node server.js' 或 'python app.py'。内置模式包括 npm/yarn/pnpm dev 命令、Docker 等。",
+	"commands.enableUniversalCommandTimeout.description": "将命令执行超时应用于所有命令，而不仅仅是已知模式。启用后，任何运行时间超过超时的命令都将被视为后台服务。适用于封装脚本。",
 	"commands.preventCompletionWithOpenTodos.description": "当待办事项列表中有未完成的待办事项时阻止任务完成",
 	"settings.vsCodeLmModelSelector.description": "VSCode 语言模型 API 的设置",
 	"settings.vsCodeLmModelSelector.vendor.description": "语言模型的供应商（例如：copilot）",
@@ -44,5 +45,5 @@
 	"settings.apiRequestTimeout.description": "等待 API 响应的最长时间（秒）（0 = 无超时，1-3600秒，默认值：600秒）。对于像 LM Studio 和 Ollama 这样可能需要更多处理时间的本地提供商，建议使用更高的值。",
 	"settings.newTaskRequireTodos.description": "使用 new_task 工具创建新任务时需要 todos 参数",
 	"settings.codeIndex.embeddingBatchSize.description": "代码索引期间嵌入操作的批处理大小。根据 API 提供商的限制调整此设置。默认值为 60。",
-	"settings.toolProtocol.description": "用于 AI 交互的工具协议。XML 是默认且推荐的协议。本机是实验性的，可能不适用于所有提供商。"
+	"settings.debug.description": "启用调试模式以显示额外按钮，用于在临时文件中以格式化 JSON 查看 API 对话历史和 UI 消息。"
 }

@@ -1,4 +1,23 @@
 {
+	"get_service_logs": {
+		"no_services": "Şu anda çalışan arka plan hizmeti bulunmamaktadır.",
+		"available_services": "Mevcut arka plan hizmetleri:",
+		"usage_hint": "Belirtilen service_id ile get_service_logs kullanarak bu hizmetin günlüklerini alabilirsiniz.",
+		"service_not_found": "Hizmet '{{serviceId}}' bulunamadı. Parametresiz get_service_logs kullanarak çalışan tüm hizmetleri listeleyebilirsiniz.",
+		"service_info": "Hizmet: {{serviceId}}\nKomut: {{command}}\nDurum: {{status}}",
+		"no_logs": "Henüz günlük yok."
+	},
+	"stop_service": {
+		"no_services": "Şu anda çalışan arka plan hizmeti bulunmamaktadır.",
+		"service_id_required": "Bir hizmeti durdurmak için service_id gereklidir.",
+		"available_services": "Mevcut arka plan hizmetleri:",
+		"usage_hint": "Belirtilen service_id ile stop_service kullanarak bu hizmeti durdurabilirsiniz.",
+		"service_not_found": "Hizmet '{{serviceId}}' bulunamadı.",
+		"success": "Hizmet '{{serviceId}}' başarıyla durduruldu.",
+		"partial_success": "Hizmet '{{serviceId}}' tamamen sonlandırılmamış olabilir.",
+		"stopping": "Hizmet '{{serviceId}}' durduruluyor.",
+		"error": "Hizmet '{{serviceId}}' durdurulamadı: {{error}}"
+	},
 	"readFile": {
 		"linesRange": " (satır {{start}}-{{end}})",
 		"definitionsOnly": " (sadece tanımlar)",
@@ -7,12 +26,25 @@
 		"imageWithSize": "Görüntü dosyası ({{size}} KB)"
 	},
 	"toolRepetitionLimitReached": "Roo bir döngüye takılmış gibi görünüyor, aynı eylemi ({{toolName}}) tekrar tekrar deniyor. Bu, mevcut stratejisinde bir sorun olduğunu gösterebilir. Görevi yeniden ifade etmeyi, daha spesifik talimatlar vermeyi veya onu farklı bir yaklaşıma yönlendirmeyi düşünün.",
+	"unknownToolError": "Roo bilinmeyen bir araç kullanmaya çalıştı: \"{{toolName}}\". Yeniden deneniyor...",
 	"codebaseSearch": {
 		"approval": "Kod tabanında '{{query}}' aranıyor..."
 	},
 	"newTask": {
 		"errors": {
 			"policy_restriction": "Politika kısıtlamaları nedeniyle yeni görev oluşturulamadı."
+		}
+	},
+	"generateImage": {
+		"openRouterApiKeyRequired": "OpenRouter modelleriyle görüntü oluşturma için OpenRouter API anahtarı gereklidir. Lütfen Görüntü Oluşturma deneysel ayarlarında yapılandırın.",
+		"failedWithStatus": "Görüntü oluşturma başarısız: {{status}} {{statusText}}",
+		"failedWithMessage": "Görüntü oluşturma başarısız: {{message}}",
+		"noImageGenerated": "Yanıtta görüntü oluşturulmadı",
+		"invalidImageData": "Yanıtta geçersiz görüntü verisi",
+		"invalidImageFormat": "Geçersiz görüntü formatı alındı",
+		"unknownError": "Bilinmeyen bir hata oluştu",
+		"roo": {
+			"authRequired": "Görüntü oluşturma için Roo Code Cloud kimlik doğrulaması gereklidir. Lütfen Roo Code Cloud'da oturum açın."
 		}
 	}
 }

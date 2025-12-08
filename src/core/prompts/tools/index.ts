@@ -13,7 +13,6 @@ import { shouldUseSingleFileRead } from "@roo-code/types"
 import { getWriteToFileDescription } from "./write-to-file"
 import { getSearchFilesDescription } from "./search-files"
 import { getListFilesDescription } from "./list-files"
-import { getInsertContentDescription } from "./insert-content"
 import { getListCodeDefinitionNamesDescription } from "./list-code-definition-names"
 import { getBrowserActionDescription } from "./browser-action"
 import { getAskFollowupQuestionDescription } from "./ask-followup-question"
@@ -26,6 +25,8 @@ import { getCodebaseSearchDescription } from "./codebase-search"
 import { getUpdateTodoListDescription } from "./update-todo-list"
 import { getRunSlashCommandDescription } from "./run-slash-command"
 import { getGenerateImageDescription } from "./generate-image"
+import { getGetServiceLogsDescription } from "./get-service-logs"
+import { getStopServiceDescription } from "./stop-service"
 import { CodeIndexManager } from "../../../services/code-index/manager"
 
 // Map of tool names to their description functions
@@ -52,12 +53,13 @@ const toolDescriptionMap: Record<string, (args: ToolArgs) => string | undefined>
 	codebase_search: (args) => getCodebaseSearchDescription(args),
 	switch_mode: () => getSwitchModeDescription(),
 	new_task: (args) => getNewTaskDescription(args),
-	insert_content: (args) => getInsertContentDescription(args),
 	apply_diff: (args) =>
 		args.diffStrategy ? args.diffStrategy.getToolDescription({ cwd: args.cwd, toolOptions: args.toolOptions }) : "",
 	update_todo_list: (args) => getUpdateTodoListDescription(args),
 	run_slash_command: () => getRunSlashCommandDescription(),
 	generate_image: (args) => getGenerateImageDescription(args),
+	get_service_logs: (args) => getGetServiceLogsDescription(args),
+	stop_service: (args) => getStopServiceDescription(args),
 }
 
 export function getToolDescriptionsForMode(
@@ -175,7 +177,6 @@ export {
 	getUseMcpToolDescription,
 	getAccessMcpResourceDescription,
 	getSwitchModeDescription,
-	getInsertContentDescription,
 	getCodebaseSearchDescription,
 	getRunSlashCommandDescription,
 	getGenerateImageDescription,

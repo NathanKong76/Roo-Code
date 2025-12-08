@@ -26,7 +26,9 @@
 		"shareSuccessOrganization": "Link organizacji skopiowany do schowka",
 		"shareSuccessPublic": "Link publiczny skopiowany do schowka",
 		"openInCloud": "Otwórz zadanie w Roo Code Cloud",
-		"openInCloudIntro": "Kontynuuj monitorowanie lub interakcję z Roo z dowolnego miejsca. Zeskanuj, kliknij lub skopiuj, aby otworzyć."
+		"openInCloudIntro": "Kontynuuj monitorowanie lub interakcję z Roo z dowolnego miejsca. Zeskanuj, kliknij lub skopiuj, aby otworzyć.",
+		"openApiHistory": "Otwórz historię API",
+		"openUiHistory": "Otwórz historię UI"
 	},
 	"unpin": "Odepnij",
 	"pin": "Przypnij",
@@ -134,7 +136,18 @@
 		"failed": "Zapytanie API nie powiodło się",
 		"streaming": "Zapytanie API...",
 		"cancelled": "Zapytanie API anulowane",
-		"streamingFailed": "Strumieniowanie API nie powiodło się"
+		"streamingFailed": "Strumieniowanie API nie powiodło się",
+		"errorTitle": "Błąd API {{code}}",
+		"errorMessage": {
+			"docs": "Dokumentacja",
+			"400": "Dostawca nie mógł przetworzyć żądania. Zatrzymaj zadanie i spróbuj innego podejścia.",
+			"401": "Nie można uwierzytelnić u dostawcy. Sprawdź konfigurację klucza API.",
+			"402": "Wygląda na to, że wyczerpałeś środki/kredyty na swoim koncie. Przejdź do dostawcy i dodaj więcej, aby kontynuować.",
+			"403": "Brak autoryzacji. Twój klucz API jest ważny, ale dostawca odmówił ukończenia tego żądania.",
+			"429": "Zbyt wiele żądań. Dostawca ogranicza Ci szybkość żądań. Poczekaj chwilę przed następnym wywołaniem API.",
+			"500": "Błąd serwera dostawcy. Po stronie dostawcy coś się nie powiodło, w Twoim żądaniu nie ma nic złego.",
+			"unknown": "Nieznany błąd API. Skontaktuj się z pomocą techniczną Roo Code."
+		}
 	},
 	"checkpoint": {
 		"regular": "Punkt kontrolny",
@@ -270,11 +283,20 @@
 		"thinking": "Myślenie",
 		"seconds": "{{count}} s"
 	},
-	"contextCondense": {
-		"title": "Kontekst skondensowany",
-		"condensing": "Kondensowanie kontekstu...",
-		"errorHeader": "Nie udało się skondensować kontekstu",
-		"tokens": "tokeny"
+	"contextManagement": {
+		"tokens": "tokeny",
+		"condensation": {
+			"title": "Kontekst skondensowany",
+			"inProgress": "Kondensowanie kontekstu...",
+			"errorHeader": "Nie udało się skondensować kontekstu"
+		},
+		"truncation": {
+			"title": "Kontekst obcięty",
+			"inProgress": "Obcinanie kontekstu...",
+			"messagesRemoved": "{{count}} wiadomość usunięta",
+			"messagesRemoved_other": "{{count}} wiadomości usunięte",
+			"description": "Starsze wiadomości zostały usunięte z konwersacji, aby pozostać w granicach okna kontekstu. To szybsze, ale mniej zachowujące kontekst podejście w porównaniu z kondensacją."
+		}
 	},
 	"followUpSuggest": {
 		"copyToInput": "Kopiuj do pola wprowadzania (lub Shift + kliknięcie)",
@@ -291,21 +313,21 @@
 			"goToSettingsButton": "Przejdź do Ustawień"
 		},
 		"release": {
-			"heading": "Nowości w rozszerzeniu:",
-			"openRouterEmbeddings": "Wsparcie dla modeli osadzania OpenRouter",
-			"chutesDynamic": "Chutes teraz dynamicznie ładuje najnowsze modele",
-			"queuedMessagesFix": "Poprawki dla gubienia się wiadomości w kolejce"
+			"heading": "Nowości:",
+			"contextRewind": "Ulepszona kondensacja kontekstu pozwala teraz przywrócić pełny poprzedni kontekst przy przewijaniu do punktu kontrolnego",
+			"rooProvider": "Dostawca Roo Code Cloud teraz zachowuje zawartość rozumowania i domyślnie używa narzędzi natywnych dla lepszej wydajności"
 		},
 		"cloudAgents": {
 			"heading": "Nowości w chmurze:",
-			"prFixer": "Przedstawiamy agenta chmurowego <bold>PR Fixer</bold> uzupełniającego PR Reviewer.",
-			"prFixerDescription": "PR Fixer Roo Code stosuje wysokiej jakości zmiany do Twoich PR, bezpośrednio z GitHub. Wywołaj go przez komentarz PR, a on przeczyta całą historię komentarzy, aby zrozumieć kontekst, uzgodnienia i kompromisy - następnie wdroży właściwą poprawkę.",
-			"tryPrFixerButton": "Wypróbuj PR Fixer"
+			"specialized": "Przedstawiamy <bold>Explainer</bold>, <bold>Planner</bold> i <bold>Coder</bold> - trzech wyspecjalizowanych agentów chmurowych, aby ulepszyć Twoje przepływy pracy.",
+			"description": "Agenci pracują razem w chmurze i mogą być uruchamiani z sieci lub przez Slack.",
+			"tryButton": "Wypróbuj agentów chmurowych"
 		},
 		"careers": "Dodatkowo, <careersLink>zatrudniamy!</careersLink>",
 		"socialLinks": "Dołącz do nas na <xLink>X</xLink>, <discordLink>Discord</discordLink>, lub <redditLink>r/RooCode</redditLink> 🚀"
 	},
 	"browser": {
+		"session": "Sesja przeglądarki",
 		"rooWantsToUse": "Roo chce użyć przeglądarki",
 		"consoleLogs": "Logi konsoli",
 		"noNewLogs": "(Brak nowych logów)",
@@ -322,8 +344,10 @@
 			"launch": "Uruchom przeglądarkę na {{url}}",
 			"click": "Kliknij ({{coordinate}})",
 			"type": "Wpisz \"{{text}}\"",
+			"press": "Naciśnij {{key}}",
 			"scrollDown": "Przewiń w dół",
 			"scrollUp": "Przewiń w górę",
+			"hover": "Najedź ({{coordinate}})",
 			"close": "Zamknij przeglądarkę"
 		}
 	},
@@ -423,7 +447,6 @@
 		"wantsToRun": "Roo chce uruchomić komendę slash",
 		"didRun": "Roo uruchomił komendę slash"
 	},
-	"docs": "Check our <DocsLink>docs</DocsLink> to learn more.",
 	"todo": {
 		"partial": "Ukończono {{completed}} z {{total}} zadań do wykonania",
 		"complete": "Ukończono {{total}} zadań do wykonania",

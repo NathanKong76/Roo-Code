@@ -1,4 +1,23 @@
 {
+	"get_service_logs": {
+		"no_services": "Derzeit sind keine Hintergrunddienste aktiv.",
+		"available_services": "Verfügbare Hintergrunddienste:",
+		"usage_hint": "Verwende get_service_logs mit einer bestimmten service_id, um Logs von diesem Dienst zu erhalten.",
+		"service_not_found": "Dienst '{{serviceId}}' nicht gefunden. Verwende get_service_logs ohne Parameter, um alle laufenden Dienste aufzulisten.",
+		"service_info": "Dienst: {{serviceId}}\nBefehl: {{command}}\nStatus: {{status}}",
+		"no_logs": "Noch keine Logs verfügbar."
+	},
+	"stop_service": {
+		"no_services": "Derzeit sind keine Hintergrunddienste aktiv.",
+		"service_id_required": "Eine service_id ist erforderlich, um einen Dienst zu stoppen.",
+		"available_services": "Verfügbare Hintergrunddienste:",
+		"usage_hint": "Verwende stop_service mit einer bestimmten service_id, um diesen Dienst zu stoppen.",
+		"service_not_found": "Dienst '{{serviceId}}' nicht gefunden.",
+		"success": "Dienst '{{serviceId}}' wurde erfolgreich gestoppt.",
+		"partial_success": "Dienst '{{serviceId}}' wurde möglicherweise nicht vollständig beendet.",
+		"stopping": "Dienst '{{serviceId}}' wird gestoppt.",
+		"error": "Fehler beim Stoppen des Dienstes '{{serviceId}}': {{error}}"
+	},
 	"readFile": {
 		"linesRange": " (Zeilen {{start}}-{{end}})",
 		"definitionsOnly": " (nur Definitionen)",
@@ -7,12 +26,25 @@
 		"imageWithSize": "Bilddatei ({{size}} KB)"
 	},
 	"toolRepetitionLimitReached": "Roo scheint in einer Schleife festzustecken und versucht wiederholt dieselbe Aktion ({{toolName}}). Dies könnte auf ein Problem mit der aktuellen Strategie hindeuten. Überlege dir, die Aufgabe umzuformulieren, genauere Anweisungen zu geben oder Roo zu einem anderen Ansatz zu führen.",
+	"unknownToolError": "Roo hat versucht, ein unbekanntes Tool zu verwenden: \"{{toolName}}\". Wiederhole Versuch...",
 	"codebaseSearch": {
 		"approval": "Suche nach '{{query}}' im Codebase..."
 	},
 	"newTask": {
 		"errors": {
 			"policy_restriction": "Neue Aufgabe konnte aufgrund von Richtlinienbeschränkungen nicht erstellt werden."
+		}
+	},
+	"generateImage": {
+		"openRouterApiKeyRequired": "OpenRouter API-Schlüssel ist für die Bildgenerierung mit OpenRouter-Modellen erforderlich. Bitte konfiguriere ihn in den Experimentellen Einstellungen für Bildgenerierung.",
+		"failedWithStatus": "Bildgenerierung fehlgeschlagen: {{status}} {{statusText}}",
+		"failedWithMessage": "Bildgenerierung fehlgeschlagen: {{message}}",
+		"noImageGenerated": "In der Antwort wurde kein Bild generiert",
+		"invalidImageData": "Ungültige Bilddaten in der Antwort",
+		"invalidImageFormat": "Ungültiges Bildformat erhalten",
+		"unknownError": "Unbekannter Fehler aufgetreten",
+		"roo": {
+			"authRequired": "Roo Code Cloud-Authentifizierung ist für die Bildgenerierung erforderlich. Bitte melde dich bei Roo Code Cloud an."
 		}
 	}
 }
